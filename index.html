@@ -10,7 +10,57 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<h1>Brandname</h1>
+<nav>
+    <ul>
+        <li class="active"><a href="#">menuitem1</a></li>
+        <li><a href="#">menuitem2</a></li>
+        <li><a href="#">menuitem3</a></li>
+        <li><a href="#">menuitem4</a></li>
+        <li><a href="#">menuitem5</a></li>
+        <li><a href="#">menuitem6</a></li>
+    </ul>
+</nav>
+<section>
+    <h2 class="hidden">Filters</h2>
+    <ul class="filters">
+        <li class="filter-fleisch">
+            <label><input type="checkbox" name="fleisch" value="fleisch">Fleisch</label>
+        </li>
+        <li class="filter-gemuese">
+            <label><input type="checkbox" name="gemuese" value="gemuese">Gemüse</label>
+        </li>
+        <li class="filter-obst">
+            <label><input type="checkbox" name="obst" value="obst">Obst</label>
+        </li>
+    </ul>
+</section>
+<section class="content">
+    <article>
+        <div class="article-image">
 
+        </div>
+        <div class="article-text">
+            <h3 class="article-title">Apfel</h3>
+            <span class="article-category obst">Obst</span>
+            <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo reprehenderit sapiente sunt tenetur ullam voluptas.</p>
+            <a href="#">Mehr erfahren</a>
+        </div>
+    </article>
+
+    <article>
+        <div class="article-image">
+
+        </div>
+        <div class="article-text">
+            <h3 class="article-title">Aubergine</h3>
+            <span class="article-category gemuese">Gemüse</span>
+            <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo reprehenderit sapiente sunt tenetur ullam voluptas.</p>
+            <a href="#">Mehr erfahren</a>
+        </div>
+    </article>
+
+</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/main.js"></script>
 </body>
