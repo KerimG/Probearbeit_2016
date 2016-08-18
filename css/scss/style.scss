@@ -3,4 +3,116 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: #c8c8c8;
+  font-family: 'Arial', 'sans-serif';
 }
+
+ul {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.brandname {
+  margin-top: 60px;
+  display: inline-block;
+}
+
+nav {
+  float: right;
+  display: inline-block;
+  margin-top: 60px;
+
+  > ul > li {
+    margin-left: 20px;
+
+    > a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    > a.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article-category {
+  float: right;
+  border-radius: 1rem;
+  padding: 2px 6px;
+}
+
+.article-category.obst {
+  background-color: #f39200;
+}
+
+.article-category.gemuese {
+  background-color: #2b9030;
+  color: #ffffff;
+}
+
+.article-category.fleisch {
+  background-color: #e73c01;
+  color: #ffffff;
+}
+
+section.filters {
+  > ul {
+    display: table;
+
+    > li {
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: 10px;
+    }
+  }
+  input[type="checkbox"] {
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+}
+
+section.content {
+
+  > article {
+    float: left;
+    width: 300px;
+    height: 460px;
+    margin: 10px 10px;
+    background-color: #ffffff;
+
+    > .article-image {
+      height: 180px;
+      background-color: #ff4444;
+    }
+
+    > .article-text {
+      margin: 30px 20px 20px 35px;
+
+      > .article-title {
+        display: inline-block;
+        margin: 0;
+        font-weight: 400;
+      }
+
+
+
+      > a.article-lead {
+        color: #000;
+        text-decoration: none;
+       }
+
+      > a.article-lead:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
