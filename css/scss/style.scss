@@ -63,6 +63,11 @@ nav {
   color: #ffffff;
 }
 
+div.content-wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
 section.filters {
   > ul {
     display: table;
@@ -80,13 +85,14 @@ section.filters {
 }
 
 section.content {
-
-  > article {
+   article {
     float: left;
     width: 300px;
     height: 460px;
     margin: 10px 10px;
     background-color: #ffffff;
+
+
 
     > .article-image {
       height: 180px;
@@ -102,8 +108,6 @@ section.content {
         font-weight: 400;
       }
 
-
-
       > a.article-lead {
         color: #000;
         text-decoration: none;
@@ -114,5 +118,14 @@ section.content {
       }
     }
   }
+
+  article:first-child{
+    margin-left: 0px;
+  }
+
+  article:last-child {
+    margin-right: 0px;
+  }
+
 }
 

@@ -46,6 +46,10 @@ nav {
   background-color: #e73c01;
   color: #ffffff; }
 
+div.content-wrapper {
+  max-width: 1260px;
+  margin: 0 auto; }
+
 section.filters > ul {
   display: table; }
   section.filters > ul > li {
@@ -56,25 +60,29 @@ section.filters input[type="checkbox"] {
   vertical-align: middle;
   margin: 0 3px; }
 
-section.content > article {
+section.content article {
   float: left;
   width: 300px;
   height: 460px;
   margin: 10px 10px;
   background-color: #ffffff; }
-  section.content > article > .article-image {
+  section.content article > .article-image {
     height: 180px;
     background-color: #ff4444; }
-  section.content > article > .article-text {
+  section.content article > .article-text {
     margin: 30px 20px 20px 35px; }
-    section.content > article > .article-text > .article-title {
+    section.content article > .article-text > .article-title {
       display: inline-block;
       margin: 0;
       font-weight: 400; }
-    section.content > article > .article-text > a.article-lead {
+    section.content article > .article-text > a.article-lead {
       color: #000;
       text-decoration: none; }
-    section.content > article > .article-text > a.article-lead:hover {
+    section.content article > .article-text > a.article-lead:hover {
       text-decoration: underline; }
+section.content article:first-child {
+  margin-left: 0px; }
+section.content article:last-child {
+  margin-right: 0px; }
 
 /*# sourceMappingURL=style.css.map */
