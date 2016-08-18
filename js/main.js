@@ -23,6 +23,7 @@ function removeFirsAndLast() {
 }
 
 $(document).ready(function () {
+
     var oldWindowSize;
     if ($(window).width() >= 960) {
         setFirstAndLast();
@@ -30,12 +31,11 @@ $(document).ready(function () {
     }
     $("input").change(function () {
         var value = $(this).val();
-        $("article.article-category." + value).toggle("display", function () {
-            removeFirsAndLast();
-            if ($(window).width() >= 960) {
-                setFirstAndLast();
-            }
-        });
+        $("article.article-category." + value).toggle();
+        removeFirsAndLast();
+        if ($(window).width() >= 960) {
+            setFirstAndLast();
+        }
     });
     $(window).resize(function () {
 
