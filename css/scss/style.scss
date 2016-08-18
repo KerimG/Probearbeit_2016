@@ -42,30 +42,63 @@ nav {
       text-decoration: none;
     }
 
-    > a.active {
+    > a.active, a:hover {
       text-decoration: underline;
     }
   }
 }
 
-.article-category {
+.article-category-indicator {
   float: right;
   border-radius: 1rem;
   padding: 2px 6px;
 }
 
-.article-category.obst {
+.article-category-indicator.obst {
   background-color: #f39200;
 }
 
-.article-category.gemuese {
+.article-category-indicator.gemuese {
   background-color: #2b9030;
   color: #ffffff;
 }
 
-.article-category.fleisch {
+.article-category-indicator.fleisch {
   background-color: #e73c01;
   color: #ffffff;
+}
+
+.article-image {
+  background-size: cover;
+}
+
+.article-image.huhn {
+  background-image: url("../resources/huhn.jpg");
+}
+
+.article-image.orange {
+  background-image: url("../resources/orange.jpg");
+}
+.article-image.rind {
+  background-image: url("../resources/rind.jpg");
+}
+.article-image.apfel {
+  background-image: url("../resources/apfel.jpg");
+}
+.article-image.banane {
+  background-image: url("../resources/banane.jpg");
+}
+
+.article-image.zucchini {
+  background-image: url("../resources/zucchini.jpg");
+}
+
+.article-image.aubergine {
+  background-image: url("../resources/aubergine.jpg");
+}
+
+.article-image.brokkoli {
+  background-image: url("../resources/brokkoli.jpg");
 }
 
 div.content-wrapper {
@@ -101,7 +134,7 @@ section.content {
 
     > .article-image {
       height: 180px;
-      background-color: #ff4444;
+
     }
 
     > .article-text {
@@ -123,17 +156,11 @@ section.content {
       }
     }
   }
-}
-
-@media only screen and (min-width: 1260px) {
-  section.content {
-    article:first-child, article:nth-child(4n+2) {
-      margin-left: 0px;
-    }
-
-    article:last-child, article:nth-child(4n+5) {
-      margin-right: 0px;
-    }
+  article.first-in-row  {
+    margin-left: 0;
+  }
+  article.last-in-row  {
+    margin-right: 0;
   }
 }
 
@@ -174,7 +201,7 @@ section.content {
       height: 300px;
 
       > .article-image {
-        width: 180px;
+        width: 220px;
         height: 100%;
         float: left;
         margin-right: 10px;
