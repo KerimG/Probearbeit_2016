@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Brandname</h1>
+<h1 class="brandname">Brandname</h1>
 <nav>
+    <h2 class="hidden">Navigation</h2>
     <ul>
-        <li class="active"><a href="#">menuitem1</a></li>
+        <li><a class="active" href="#">menuitem1</a></li>
         <li><a href="#">menuitem2</a></li>
         <li><a href="#">menuitem3</a></li>
         <li><a href="#">menuitem4</a></li>
@@ -21,21 +22,23 @@
         <li><a href="#">menuitem6</a></li>
     </ul>
 </nav>
-<section>
+<section class="filters">
     <h2 class="hidden">Filters</h2>
-    <ul class="filters">
+    <ul class="filters-list">
+        <li class="filter-legend">Filter:</li>
         <li class="filter-fleisch">
-            <label><input type="checkbox" name="fleisch" value="fleisch">Fleisch</label>
+            <label class="article-category fleisch"><input type="checkbox" name="fleisch" value="fleisch">Fleisch</label>
         </li>
         <li class="filter-gemuese">
-            <label><input type="checkbox" name="gemuese" value="gemuese">Gemüse</label>
+            <label class="article-category gemuese"><input type="checkbox" name="gemuese" value="gemuese">Gemüse</label>
         </li>
         <li class="filter-obst">
-            <label><input type="checkbox" name="obst" value="obst">Obst</label>
+            <label class="article-category obst"><input type="checkbox" name="obst" value="obst">Obst</label>
         </li>
     </ul>
 </section>
 <section class="content">
+    <h2 class="hidden">Articles</h2>
     <article>
         <div class="article-image">
 
@@ -44,7 +47,7 @@
             <h3 class="article-title">Apfel</h3>
             <span class="article-category obst">Obst</span>
             <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-            <a href="#">Mehr erfahren</a>
+            <a class="article-lead" href="#"><span>Mehr erfahren</a>
         </div>
     </article>
 
@@ -56,7 +59,7 @@
             <h3 class="article-title">Aubergine</h3>
             <span class="article-category gemuese">Gemüse</span>
             <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-            <a href="#">Mehr erfahren</a>
+            <a class="article-lead" href="#">Mehr erfahren</a>
         </div>
     </article>
 
