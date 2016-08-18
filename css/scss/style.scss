@@ -5,6 +5,11 @@ html, body {
   height: 100%;
   background-color: #c8c8c8;
   font-family: 'Arial', 'sans-serif';
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul {
@@ -85,14 +90,14 @@ section.filters {
 }
 
 section.content {
-   article {
-    float: left;
+  font-size: 0;
+  article {
+    font-size: 16px;
+    display: inline-block;
     width: 300px;
     height: 460px;
     margin: 10px 10px;
     background-color: #ffffff;
-
-
 
     > .article-image {
       height: 180px;
@@ -111,21 +116,97 @@ section.content {
       > a.article-lead {
         color: #000;
         text-decoration: none;
-       }
+      }
 
       > a.article-lead:hover {
         text-decoration: underline;
       }
     }
   }
-
-  article:first-child{
-    margin-left: 0px;
-  }
-
-  article:last-child {
-    margin-right: 0px;
-  }
-
 }
 
+@media only screen and (min-width: 1260px) {
+  section.content {
+    article:first-child, article:nth-child(4n+2) {
+      margin-left: 0px;
+    }
+
+    article:last-child, article:nth-child(4n+5) {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1259px) {
+  .brandname {
+    margin-left: 10px;
+  }
+
+  nav {
+    margin-right: 10px;
+  }
+
+  div.content-wrapper {
+    max-width: 960;
+  }
+
+  section.content {
+    article {
+      margin: 10px 10px;
+      width: 300px;
+    }
+  }
+}
+
+@media only screen and (min-width: 460px) and (max-width: 959px) {
+  .brandname {
+    margin-left: 10px;
+  }
+
+  nav {
+    margin-right: 10px;
+  }
+
+  section.content {
+    article {
+      width: 96%;
+      margin: 10px 2%;
+      height: 300px;
+
+      > .article-image {
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 459px) {
+  .brandname {
+    margin: 20px auto;
+  }
+
+  div.content-wrapper {
+    max-width: 460px;
+  }
+
+  section.content {
+    article {
+      width: 96%;
+      margin: 10px 2%;
+      height: auto;
+      > .article-image {
+        width: 100%;
+        height: 180px;
+        clear: both;
+        margin: 0;
+      }
+
+      > .article-text {
+        margin-top: 15px;
+      }
+    }
+  }
+}
