@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="content-wrapper">
+<div id="content" class="content-wrapper">
     <h1 class="brandname">Brandname</h1>
     <nav>
         <h2 class="hidden">Navigation</h2>
@@ -43,6 +43,20 @@
     </section>
     <section class="content">
         <h2 class="hidden">Articles</h2>
+
+        <article class="article-category {{ article.category }}"
+                 v-for="article in articles"
+        >
+            <div class="article-image {{ article.title | lowercase }}"></div>
+            <div class="article-text">
+                <h3 class="article-title">{{ article.title }}</h3>
+                <span class="article-category-indicator {{ article.category }}">{{ article.category | capitalize }}</span>
+                <p class="article-body">{{ article.text }}</p>
+                <a href="{{ article.link }}" class="article-lead">Mehr erfahren</a>
+            </div>
+        </article>
+
+
             <article class="article-category obst">
                 <div class="article-image apfel">
 
@@ -56,100 +70,12 @@
                     <a class="article-lead" href="#">Mehr erfahren</a>
                 </div>
             </article>
-            <article class="article-category gemuese">
-                <div class="article-image aubergine">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Aubergine</h3>
-                    <span class="article-category-indicator gemuese">Gemüse</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category obst">
-                <div class="article-image banane">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Banane</h3>
-                    <span class="article-category-indicator obst">Obst</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category gemuese">
-                <div class="article-image brokkoli">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Brokkoli</h3>
-                    <span class="article-category-indicator gemuese">Gemüse</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category fleisch">
-                <div class="article-image huhn">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Huhn</h3>
-                    <span class="article-category-indicator fleisch">Fleisch</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category obst">
-                <div class="article-image orange">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Orange</h3>
-                    <span class="article-category-indicator obst">Obst</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category fleisch">
-                <div class="article-image rind">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Rind</h3>
-                    <span class="article-category-indicator fleisch">Fleisch</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
-            <article class="article-category gemuese">
-                <div class="article-image zucchini">
-
-                </div>
-                <div class="article-text">
-                    <h3 class="article-title">Zucchini</h3>
-                    <span class="article-category-indicator gemuese">Gemüse</span>
-                    <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam, aut
-                        beatae, doloribus explicabo inventore ipsum itaque iusto labore laborum minus quibusdam quis quo
-                        reprehenderit sapiente sunt tenetur ullam voluptas.</p>
-                    <a class="article-lead" href="#">Mehr erfahren</a>
-                </div>
-            </article>
     </section>
 </div>
+
+<script src="js/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

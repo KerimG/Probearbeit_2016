@@ -1,4 +1,4 @@
-function setFirstAndLast() {
+/* function setFirstAndLast() {
     var firstElements, lastElements;
     if ($(window).width() > 1260) {
         firstElements = 5;
@@ -53,3 +53,21 @@ $(document).ready(function () {
         }
     });
 });
+*/
+
+new Vue({
+    el: '#content',
+
+    data: {
+        articles: [
+            { image: 'resources/apfel.jpg', title: 'Apfel', category: 'obst', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/aubergine.jpg', title: 'Aubergine', category: 'gemuese', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/banane.jpg', title: 'Banane', category: 'obst', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/brokkoli.jpg', title: 'Brokkoli', category: 'gemuese', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/huhn.jpg', title: 'Huhn', category: 'fleisch', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/orange.jpg', title: 'Orange', category: 'obst', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/rind.jpg', title: 'Rind', category: 'fleisch', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'},
+            { image: 'resources/zucchini.jpg', title: 'Zucchini', category: 'gemuese', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo lingula eget dolor. Aenean massa. Cum socils natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', link: '#'}
+        ]
+    }
+})
