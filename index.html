@@ -42,7 +42,7 @@
         <article class="article-category {{ article.category }}"
                  v-for="article in articles"
                  v-if="article.visible">
-            <div class="article-image {{ article.title | lowercase }}"></div>
+            <div class="article-image {{ article.title | lowercase }}" style="background-image: url('{{ article.image }}');"></div>
             <div class="article-text">
                 <h3 class="article-title">{{ article.title }}</h3>
                 <span class="article-category-indicator {{ article.category }}">{{ article.category | umlaute | capitalize }}</span>
