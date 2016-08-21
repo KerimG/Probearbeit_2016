@@ -7,28 +7,22 @@ html, body {
   font-family: 'Arial', 'sans-serif';
   font-size: 16px;
 }
-
 body {
   overflow-x: hidden;
 }
-
 .hidden {
   display: none;
 }
-
 .brandname {
   margin-top: 60px;
   display: inline-block;
 }
-
 nav {
   float: right;
   margin-top: 65px;
-
   button.menu-button {
     display: none;
   }
-
   > ul {
     list-style-type: none;
     margin: 0;
@@ -40,43 +34,35 @@ nav {
         transition: 0.3s;
         padding: 10px 20px 10px 0px;
       }
-
       > a.active, a:hover {
         text-decoration: underline;
       }
     }
   }
 }
-
 .article-category-indicator {
   float: right;
   border-radius: 1rem;
   padding: 2px 6px;
 }
-
 .article-category-indicator.obst {
   background-color: #f39200;
 }
-
 .article-category-indicator.gemuese {
   background-color: #2b9030;
   color: #ffffff;
 }
-
 .article-category-indicator.fleisch {
   background-color: #e73c01;
   color: #ffffff;
 }
-
 div.content-wrapper {
   max-width: 1260px;
   margin: 0 auto;
 }
-
 section.filters {
   > ul {
     display: table;
-
     > li {
       display: table-cell;
       vertical-align: middle;
@@ -88,7 +74,6 @@ section.filters {
     margin: 0 3px;
   }
 }
-
 section.content {
   font-size: 0;
   article {
@@ -98,33 +83,27 @@ section.content {
     height: 460px;
     margin: 10px 10px;
     background-color: #ffffff;
-
     > .article-image {
       height: 180px;
       background-size: cover;
     }
-
     > .article-text {
       margin: 30px 20px 20px 35px;
-
       > .article-title {
         display: inline-block;
         margin: 0;
         font-weight: 400;
       }
-
       > a.article-lead {
         color: #000;
         text-decoration: none;
       }
-
       > a.article-lead:hover {
         text-decoration: underline;
       }
     }
   }
 }
-
 @media only screen and (min-width: 1260px) {
   section.content {
     > article:nth-child(4n+2) {
@@ -135,29 +114,24 @@ section.content {
     }
   }
 }
-
 @media only screen and (min-width: 960px) and (max-width: 1259px) {
   .brandname {
     margin-left: 10px;
   }
-
   div.content-wrapper {
     max-width: 960;
   }
-
   section.content {
     article {
       margin: 10px 10px;
       width: 300px;
     }
-
     article:nth-child(3n+2) {
       margin-left: 0;
     }
     article:nth-child(3n+4) {
       margin-right: 0;
     }
-
   }
 }
 
@@ -167,7 +141,6 @@ section.content {
     right: 25px;
     top: 15px;
     margin: 0;
-
     button.menu-button {
       display: block;
       text-decoration: none;
@@ -179,20 +152,16 @@ section.content {
       border-radius: 5px;
       margin-bottom: 20px;
     }
-
     button:focus {
       border: none;
     }
-
     > ul {
       padding-top: 15px;
       > li {
         float: none;
         margin-top: 35px;
-
         > a {
           box-shadow: 4px 4px 5px #888888;
-
           display: none;
           padding: 15px;
           text-align: center;
@@ -217,7 +186,6 @@ section.content {
       width: 96%;
       margin: 10px 2%;
       height: 300px;
-
       > .article-image {
         width: 220px;
         height: 100%;
@@ -246,6 +214,7 @@ section.content {
       }
     }
   }
+
   section.content {
     article {
       width: 96%;

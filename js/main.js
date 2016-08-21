@@ -10,9 +10,9 @@ new Vue({
     el: '#content',
     data: {
         filters: [
-            { filter: 'fleisch', visible: true },
-            { filter: 'obst', visible: true },
-            { filter: 'gemuese', visible: true }
+            {filter: 'fleisch', visible: true},
+            {filter: 'obst', visible: true},
+            {filter: 'gemuese', visible: true}
         ],
         articles: [
             {

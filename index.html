@@ -43,7 +43,8 @@
         <article class="article-category {{ article.category }}"
                  v-for="article in articles"
                  v-if="article.visible">
-            <div class="article-image {{ article.title | lowercase }}" v-bind:style="{backgroundImage: 'url(' + article.image + ')'}"></div>
+            <div class="article-image {{ article.title | lowercase }}"
+                 v-bind:style="{backgroundImage: 'url(' + article.image + ')'}"></div>
             <div class="article-text">
                 <h3 class="article-title">{{ article.title }}</h3>
                 <span class="article-category-indicator {{ article.category }}">{{ article.category | umlaute | capitalize }}</span>
@@ -54,7 +55,8 @@
     </section>
 </div>
 <script src="js/vue.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
