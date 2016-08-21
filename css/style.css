@@ -50,33 +50,6 @@ nav {
   background-color: #e73c01;
   color: #ffffff; }
 
-.article-image {
-  background-size: cover; }
-
-.article-image.huhn {
-  background-image: url("../resources/huhn.jpg"); }
-
-.article-image.orange {
-  background-image: url("../resources/orange.jpg"); }
-
-.article-image.rind {
-  background-image: url("../resources/rind.jpg"); }
-
-.article-image.apfel {
-  background-image: url("../resources/apfel.jpg"); }
-
-.article-image.banane {
-  background-image: url("../resources/banane.jpg"); }
-
-.article-image.zucchini {
-  background-image: url("../resources/zucchini.jpg"); }
-
-.article-image.aubergine {
-  background-image: url("../resources/aubergine.jpg"); }
-
-.article-image.brokkoli {
-  background-image: url("../resources/brokkoli.jpg"); }
-
 div.content-wrapper {
   max-width: 1260px;
   margin: 0 auto; }
@@ -101,7 +74,8 @@ section.content {
     margin: 10px 10px;
     background-color: #ffffff; }
     section.content article > .article-image {
-      height: 180px; }
+      height: 180px;
+      background-size: cover; }
     section.content article > .article-text {
       margin: 30px 20px 20px 35px; }
       section.content article > .article-text > .article-title {
@@ -113,11 +87,12 @@ section.content {
         text-decoration: none; }
       section.content article > .article-text > a.article-lead:hover {
         text-decoration: underline; }
-  section.content article.first-in-row {
-    margin-left: 0; }
-  section.content article.last-in-row {
-    margin-right: 0; }
 
+@media only screen and (min-width: 1260px) {
+  section.content > article:nth-child(4n+2) {
+    margin-left: 0; }
+  section.content > article:nth-child(4n+5) {
+    margin-right: 0; } }
 @media only screen and (min-width: 960px) and (max-width: 1259px) {
   .brandname {
     margin-left: 10px; }
@@ -130,7 +105,11 @@ section.content {
 
   section.content article {
     margin: 10px 10px;
-    width: 300px; } }
+    width: 300px; }
+  section.content article:nth-child(3n+2) {
+    margin-left: 0; }
+  section.content article:nth-child(3n+4) {
+    margin-right: 0; } }
 @media only screen and (min-width: 460px) and (max-width: 959px) {
   .brandname {
     margin-left: 10px; }
