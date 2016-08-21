@@ -1,8 +1,5 @@
 Vue.filter('umlaute', function (value) {
-        var valueWithUmlaute = value.replace(/ae/g, 'ä');
-        valueWithUmlaute = value.replace(/oe/g, 'ö');
-        valueWithUmlaute = value.replace(/ue/g, 'ü');
-        return valueWithUmlaute;
+        return value.replace(/ae/g, 'ä').replace(/oe/g, 'ö').replace(/ue/g, 'ü');
     }
 );
 
