@@ -10,11 +10,6 @@ html, body {
 body {
   overflow-x: hidden; }
 
-ul {
-  list-style-type: none; }
-  ul li {
-    display: inline-block; }
-
 .hidden {
   display: none; }
 
@@ -24,15 +19,21 @@ ul {
 
 nav {
   float: right;
-  display: inline-block;
-  margin-top: 60px; }
-  nav > ul > li {
-    margin-left: 20px; }
-    nav > ul > li > a {
-      color: #000000;
-      text-decoration: none; }
-    nav > ul > li > a.active, nav > ul > li a:hover {
-      text-decoration: underline; }
+  margin-top: 65px; }
+  nav button.menu-button {
+    display: none; }
+  nav > ul {
+    list-style-type: none;
+    margin: 0; }
+    nav > ul > li {
+      float: left; }
+      nav > ul > li > a {
+        color: #000000;
+        text-decoration: none;
+        transition: 0.3s;
+        padding: 10px 20px 10px 0px; }
+      nav > ul > li > a.active, nav > ul > li a:hover {
+        text-decoration: underline; }
 
 .article-category-indicator {
   float: right;
@@ -97,9 +98,6 @@ section.content {
   .brandname {
     margin-left: 10px; }
 
-  nav {
-    margin-right: 10px; }
-
   div.content-wrapper {
     max-width: 960; }
 
@@ -110,12 +108,42 @@ section.content {
     margin-left: 0; }
   section.content article:nth-child(3n+4) {
     margin-right: 0; } }
+@media only screen and (max-width: 959px) {
+  nav {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    margin: 0; }
+    nav button.menu-button {
+      display: block;
+      text-decoration: none;
+      float: right;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 20px; }
+    nav button:focus {
+      border: none; }
+    nav > ul {
+      padding-top: 15px; }
+      nav > ul > li {
+        float: none;
+        margin-top: 35px; }
+        nav > ul > li > a {
+          box-shadow: 4px 4px 5px #888888;
+          display: none;
+          padding: 15px;
+          text-align: center;
+          color: #FFFFFF;
+          background-color: #777777;
+          border-radius: 5px; } }
 @media only screen and (min-width: 460px) and (max-width: 959px) {
   .brandname {
-    margin-left: 10px; }
-
-  nav {
-    margin-right: 10px; }
+    width: 100%;
+    margin-top: 60px;
+    text-align: center; }
 
   section.content article {
     width: 96%;
@@ -128,10 +156,17 @@ section.content {
       margin-right: 10px; } }
 @media only screen and (max-width: 459px) {
   .brandname {
-    margin: 20px auto; }
+    width: 100%;
+    margin-top: 60px;
+    text-align: center; }
 
   div.content-wrapper {
     max-width: 460px; }
+
+  section.filters ul {
+    padding-left: 5px; }
+    section.filters ul li {
+      padding: 0 3px; }
 
   section.content article {
     width: 96%;

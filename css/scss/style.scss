@@ -12,14 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-ul {
-  list-style-type: none;
-
-  li {
-    display: inline-block;
-  }
-}
-
 .hidden {
   display: none;
 }
@@ -31,19 +23,27 @@ ul {
 
 nav {
   float: right;
-  display: inline-block;
-  margin-top: 60px;
+  margin-top: 65px;
 
-  > ul > li {
-    margin-left: 20px;
+  button.menu-button {
+    display: none;
+  }
 
-    > a {
-      color: #000000;
-      text-decoration: none;
-    }
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    > li {
+      float: left;
+      > a {
+        color: #000000;
+        text-decoration: none;
+        transition: 0.3s;
+        padding: 10px 20px 10px 0px;
+      }
 
-    > a.active, a:hover {
-      text-decoration: underline;
+      > a.active, a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -141,10 +141,6 @@ section.content {
     margin-left: 10px;
   }
 
-  nav {
-    margin-right: 10px;
-  }
-
   div.content-wrapper {
     max-width: 960;
   }
@@ -165,13 +161,55 @@ section.content {
   }
 }
 
+@media only screen and (max-width: 959px) {
+  nav {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    margin: 0;
+
+    button.menu-button {
+      display: block;
+      text-decoration: none;
+      float: right;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    button:focus {
+      border: none;
+    }
+
+    > ul {
+      padding-top: 15px;
+      > li {
+        float: none;
+        margin-top: 35px;
+
+        > a {
+          box-shadow: 4px 4px 5px #888888;
+
+          display: none;
+          padding: 15px;
+          text-align: center;
+          color: #FFFFFF;
+          background-color: #777777;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 460px) and (max-width: 959px) {
   .brandname {
-    margin-left: 10px;
-  }
-
-  nav {
-    margin-right: 10px;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
   }
 
   section.content {
@@ -192,12 +230,22 @@ section.content {
 
 @media only screen and (max-width: 459px) {
   .brandname {
-    margin: 20px auto;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
   }
   div.content-wrapper {
     max-width: 460px;
   }
 
+  section.filters {
+    ul {
+      padding-left: 5px;
+      li {
+        padding: 0 3px;
+      }
+    }
+  }
   section.content {
     article {
       width: 96%;

@@ -10,9 +10,9 @@ new Vue({
     el: '#content',
     data: {
         filters: [
-            {filter: 'fleisch', visible: true},
-            {filter: 'obst', visible: true},
-            {filter: 'gemuese', visible: true}
+            { filter: 'fleisch', visible: true },
+            { filter: 'obst', visible: true },
+            { filter: 'gemuese', visible: true }
         ],
         articles: [
             {
@@ -81,12 +81,23 @@ new Vue({
             }
         ]
     },
-    methods : {
+    methods: {
         updateVisibility: function (filter) {
             this.articles.forEach(function (article) {
                 if (article.category === filter)
-                article.visible = !article.visible;
+                    article.visible = !article.visible;
             })
         }
     }
+});
+
+$(document).ready(function () {
+    $('button.menu-button').click(function () {
+        $("nav > ul > li > a").toggle();
+    });
+    $(window).resize(function () {
+        if ($(window).width() >= 960 && $("nav > ul > li > a").css("display") != "inline") {
+            $("nav > ul > li > a").css("display", "inline");
+        }
+    });
 });
