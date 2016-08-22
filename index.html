@@ -48,7 +48,7 @@
                 <h3 class="article-title">{{ article.title }}</h3>
                 <span class="article-category-indicator {{ article.category }}">{{ article.category | umlaute | capitalize }}</span>
                 <p class="article-body">{{ article.text }}</p>
-                <a href="{{ article.link }}" class="article-lead">Mehr erfahren</a>
+                <span class="arrow {{ article.category }}">〉</span><a href="{{ article.link }}" class="article-lead">Mehr erfahren</a>
             </div>
         </article>
     </section>

@@ -56,6 +56,16 @@ nav {
   background-color: #e73c01;
   color: #ffffff;
 }
+
+span.arrow.obst {
+  color: #f39200;
+}
+span.arrow.gemuese {
+  color: #2b9030;
+}
+span.arrow.fleisch {
+  color: #e73c01;
+}
 div.content-wrapper {
   max-width: 1260px;
   margin: 0 auto;
@@ -100,6 +110,7 @@ section.content {
       }
       > a.article-lead:hover {
         text-decoration: underline;
+
       }
     }
   }
@@ -119,7 +130,7 @@ section.content {
     margin-left: 10px;
   }
   div.content-wrapper {
-    max-width: 960;
+    max-width: 960px;
   }
   section.content {
     article {
